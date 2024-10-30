@@ -1,4 +1,9 @@
+﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.DependencyInjection;
+using CondeJoao_PruebaProgreso1.Data;
 var builder = WebApplication.CreateBuilder(args);
+builder.Services.AddDbContext<CondeJoao_PruebaProgreso1Context>(options =>
+    options.UseSqlServer(builder.Configuration.GetConnectionString("CondeJoao_PruebaProgreso1Context") ?? throw new InvalidOperationException("Connection string 'CondeJoao_PruebaProgreso1Context' not found.")));
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
