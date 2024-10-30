@@ -29,6 +29,7 @@ namespace CondeJoao_PruebaProgreso1.Models
         [Display(Name = "Celular")]
         public Celular? Celular { get; set; }
 
+        [Display(Name = "Celular")]
         [ForeignKey(nameof(Celular))]
         public int IdCelular { get; set; }
     }
