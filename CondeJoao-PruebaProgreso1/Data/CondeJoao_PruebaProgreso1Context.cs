@@ -15,5 +15,6 @@ namespace CondeJoao_PruebaProgreso1.Data
         }
 
         public DbSet<CondeJoao_PruebaProgreso1.Models.Conde> Conde { get; set; } = default!;
+        public DbSet<CondeJoao_PruebaProgreso1.Models.Celular> Celular { get; set; } = default!;
     }
 }
